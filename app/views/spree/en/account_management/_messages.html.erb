@@ -1,29 +1,239 @@
-<div class="text-center">
+<!-- <div class="text-center">
 	<h1 class="text-center ">My Messages</h1>
 </div>
 <hr>
 <p class="text-center"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 <div class="col-md-12">
-	<% if @user.contact_stores.any? %>
+	<%# if @user.contact_stores.any? %>
 	 <div class="clear-fix"></div>
 	 <div>
-	 	<% @user.contact_stores.each do |cs| %>
+	 	<%# @user.contact_stores.each do |cs| %>
 	 	 <div style="background-color: white;">
 	 	 	
-	 	 	<p><strong>Subject: </strong>   <%= cs.subject %></p>
-	 	 	<p><strong>Query:</strong>  <%= cs.query %></p>
-	 	 	<p><strong>Order Number:</strong>   <%= cs.order.number %></p>
-	 	 	<p><strong>Total Order Items: </strong>   <%= cs.order.line_items.count %></p>
+	 	 	<p><strong>Subject: </strong>   <%#= cs.subject %></p>
+	 	 	<p><strong>Query:</strong>  <%#= cs.query %></p>
+	 	 	<p><strong>Order Number:</strong>   <%#= cs.order.number %></p>
+	 	 	<p><strong>Total Order Items: </strong>   <%#= cs.order.line_items.count %></p>
 
 	 	 </div>
 	 	 <hr>
-	 	<% end %>
+	 	<%# end %>
 	 </div>
-	<% else %>
+	<%# else %>
 		<p> No Message(s) Found </p>
-	<% end %>
+	<%# end %>
 	
 </div>
 <p>
 	<%#= f.submit "Save", :class => 'btn btn-primary' %>
-</p>
+</p> --> 
+
+
+
+<div class="clearfix"></div>
+<div class="container">
+  <div class="stor-full-top">
+    <div class="dv-title text-center col-md-12">
+      <h2>Messages</h2>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="locan-stor cate-pg">
+    <%= render  partial: "spree/en/account_management/side_bar_tab" %>
+    <!--- inner section start ----->
+    <div class="col-lg-10 col-md-10 col-sm-9 stor-list-pg ed-top pul-mess-ge">
+      <div class="col-lg-12 col-md-12 col-sm-12 acc_form_set">
+        <div class="col-lg-12 col-md-12 col-sm-12 wet-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. </p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 wet-message-acc">
+          <div class="box-meaasage-set col-lg-12 col-md-12 col-sm-12 bg-gry-set">
+            <ul class="nulla">
+              <li class="pull-left nl-1">(Store Name)</li>
+              <li class="pull-right nl-2"><font>Sub-Order:</font> (Sub order number)</li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="dvd"></div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+              <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+                <p>(Store Name)<br>
+                  <font>12/03/2018</font></p>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+                <a href="#"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam </p></a>
+              </div>
+            </div>
+          </div>
+          <div class="box-meaasage-set col-lg-12 col-md-12 col-sm-12 mrt-20-ord new_message">
+            <ul class="nulla">
+              <li class="pull-left nl-1">(Store Name)</li>
+              <li class="pull-right nl-2"><font>Sub-Order:</font> (Sub order number)</li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="dvd"></div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+              <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+                <p>Me<br>
+                  <font>12/03/2018</font></p>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-9 tor-ses fel-link">
+                <a>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam </a>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class = "message_details">
+			<div class="box-meaasage-set col-lg-12 col-md-12 col-sm-12">
+				<ul class="nulla">
+				  <li class="pull-left nl-1">(Store Name)</li>
+				  <li class="pull-right nl-2"><font>Sub-Order:</font> (Sub order number)</li>
+				</ul>
+				<div class="clearfix"></div>
+				<div class="dvd"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+				  <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+					<p>Me<br>
+					  <font>12/03/2018</font></p>
+				  </div>
+				  <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+					<p>Hi,<br>
+					  <br>
+					  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id. Phasellus suscipit tellus ante, nec dignissim elit imperdiet nec. Nullam fringilla feugiat nisl. Ut pretium, metus venenatis dictum viverra, dui metus finibus enim, ac rhoncus sem lorem vitae mauris. Suspendisse ut venenatis libero. Suspendisse lorem felis, pretium in maximus id, tempor non ipsum <br>
+					  <br>
+					  Thanks,</p>
+				  </div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="dvd"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+				  <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+					<p>Me<br>
+					  <font>12/03/2018</font></p>
+				  </div>
+				  <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+					<p>Hi,<br>
+					  <br>
+					  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id. Phasellus suscipit tellus ante, nec dignissim elit imperdiet nec. Nullam fringilla feugiat nisl. Ut pretium, metus venenatis dictum viverra, dui metus finibus enim, ac rhoncus sem lorem vitae mauris. Suspendisse ut venenatis libero. Suspendisse lorem felis, pretium in maximus id, tempor non ipsum <br>
+					  <br>
+					  Thanks,</p>
+				  </div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="dvd"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+				  <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+					<p>Me<br>
+					  <font>12/03/2018</font></p>
+				  </div>
+				  <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+					<p>Hi,<br>
+					  <br>
+					  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id. Phasellus suscipit tellus ante <br>
+					  <br>
+					  Thanks,</p>
+				  </div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="dvd"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+				  <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+					<p>Me<br>
+					  <font>12/03/2018</font></p>
+				  </div>
+				  <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+					<p>Hi,<br>
+					  <br>
+					  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id. Phasellus suscipit tellus ante, nec dignissim elit imperdiet nec. Nullam fringilla feugiat nisl. Ut pretium, metus venenatis dictum viverra, dui metus finibus enim, ac rhoncus sem lorem vitae mauris. Suspendisse ut venenatis libero. Suspendisse lorem felis, pretium in maximus id, tempor non ipsum <br>
+					  <br>
+					  Thanks,</p>
+				  </div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="dvd"></div>
+				<div class="clearfix"></div>
+				<div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+				  <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+					<p>Me<br>
+					  <font>12/03/2018</font></p>
+				  </div>
+				  <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+					<p>Hi,<br>
+					  <br>
+					  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam egestas, velit at condimentum placerat, sem sapien laoreet mauris, dictum porttitor lacus est nec enim. Vivamus feugiat elit lorem, eu porttitor ante ultrices id. Phasellus suscipit tellus ante, nec dignissim elit imperdiet nec. Nullam fringilla feugiat nisl. Ut pretium, metus venenatis dictum viverra, dui metus finibus enim, ac rhoncus sem lorem vitae mauris. Suspendisse ut venenatis libero. Suspendisse lorem felis, pretium in maximus id, tempor non ipsum <br>
+					  <br>
+					  Thanks,</p>
+				  </div>
+				</div>
+				<div class = "reply_box">
+					<div class="clearfix"></div>
+					<div class="dvd"></div>
+					<div class="clearfix"></div>
+				
+					<ul class="nulla reply-set">
+					  <li class="pull-left nl-1">Reply</li>
+					</ul>
+					<form class="needs-validation purch sit-dv" novalidate>
+					  <textarea class="form-control reply_text" id="validationCustom01" required></textarea>
+					  <div class="add-rev-btns">
+						<button class="sub-btn-add">Send</button>
+					  </div>
+					</form>
+				 </div>
+			  </div>
+			  <div class="clearfix"></div>
+			  <div class="msg-btn-set">
+				<ul>
+				  <li>
+					<button class="btn-rp-1 sub-btn-add add_reply" >REPLY</button>
+				  </li>
+				  <li>
+					<button class="btn-rp-2 cancel-btn hide_msg_details">Hide Details</button>
+				  </li>
+				  <li>
+					<button class="btn-rp-3 cancel-btn" data-toggle="modal" data-target="#Reply_message_modal">Escalate<br>
+					to Black-Line</button>
+				  </li>
+				</ul>
+			  </div>
+			  <div class="clearfix"></div>
+		  </div>
+		    <div class="clearfix"></div>
+          <div class="box-meaasage-set col-lg-12 col-md-12 col-sm-12 mrt-20-ord bg-gry-set">
+            <ul class="nulla">
+              <li class="pull-left nl-1">(Store Name)</li>
+              <li class="pull-right nl-2"><font>Sub-Order:</font> (Sub order number)</li>
+            </ul>
+            <div class="clearfix"></div>
+            <div class="dvd"></div>
+            <div class="clearfix"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 p-0 mess-dies">
+              <div class="col-lg-3 col-md-3 col-sm-3 tor p-0">
+                <p>(Store Name)<br>
+                  <font>12/03/2018</font></p>
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-9 tor-ses">
+               <a href="#"> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Aliquam </p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--- inner section end ----->
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<!--- advertise ment section start--->
+<!-- <div class="adver-sec">
+  <div class="container">
+    <div class="adver-sec-mn"><%#= image_tag "advertize.jpg",class: "img-responsive", alt: "" %></div>
+  </div>
+</div> -->
+<!--- advertise ment section end--->
